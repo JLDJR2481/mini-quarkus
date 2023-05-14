@@ -1,8 +1,15 @@
 package edu.craptocraft.quickstart;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class Beer {
 
+    @NotNull
+    @NotBlank
     private String name;
+    @Min(100)
     private int capacity;
 
     public Beer() {

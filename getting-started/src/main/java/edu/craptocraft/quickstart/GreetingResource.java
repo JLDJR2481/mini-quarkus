@@ -1,5 +1,6 @@
 package edu.craptocraft.quickstart;
 
+import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -19,7 +20,7 @@ public class GreetingResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createBeer(Beer beer) {
+    public Response createBeer(@Valid Beer beer) {
         System.out.println(beer);
         return Response.ok().build();
     }
