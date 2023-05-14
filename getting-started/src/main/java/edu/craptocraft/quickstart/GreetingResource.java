@@ -1,21 +1,26 @@
 package edu.craptocraft.quickstart;
 
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-
+import jakarta.validation.Valid;
+import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 @Path("/hello")
 public class GreetingResource {
 
-    @ConfigProperty(name = "greetings.message")
-    String msg;
-
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return msg;
+    public Beer getBeer() {
+        return new Beer("Alhambra", 300);
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response createBeer(@Valid Beer beer) {
+        return Response.ok().build();
     }
 }
