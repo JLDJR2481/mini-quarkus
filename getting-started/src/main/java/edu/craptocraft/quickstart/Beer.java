@@ -1,5 +1,8 @@
 package edu.craptocraft.quickstart;
 
+import java.time.LocalDate;
+
+import jakarta.json.bind.annotation.JsonbDateFormat;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -9,8 +12,13 @@ public class Beer {
     @NotNull
     @NotBlank
     private String name;
+
     @Min(100)
     private int capacity;
+
+    @NotExpired
+    @JsonbDateFormat("yyyy-MM-dd")
+    private LocalDate expired;
 
     public Beer() {
     }
@@ -34,6 +42,14 @@ public class Beer {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public LocalDate getExpired() {
+        return expired;
+    }
+
+    public void setExpired(LocalDate expired) {
+        this.expired = expired;
     }
 
     @Override
