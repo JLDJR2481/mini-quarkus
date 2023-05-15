@@ -4,9 +4,6 @@ public class WorldClock {
 
     private String currentDateTime;
 
-    public WorldClock() {
-    }
-
     public String getCurrentDateTime() {
         return currentDateTime;
     }

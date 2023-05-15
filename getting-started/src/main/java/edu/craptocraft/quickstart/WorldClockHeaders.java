@@ -1,9 +1,9 @@
-package edu.craptocraft.quickstart;
+// package edu.craptocraft.quickstart;
 
-import jakarta.ws.rs.HeaderParam;
+// import jakarta.ws.rs.HeaderParam;
 
-public class WorldClockHeaders {
-    @HeaderParam("X-Logger")
-    String logger;
+// public class WorldClockHeaders {
+// @HeaderParam("X-Logger")
+// String logger;
 
-}
+// }
