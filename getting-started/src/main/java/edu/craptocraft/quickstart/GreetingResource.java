@@ -1,6 +1,8 @@
 package edu.craptocraft.quickstart;
 
-import jakarta.inject.Inject;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
+// import jakarta.inject.Inject;
 
 // import org.eclipse.microprofile.rest.client.inject.RestClient;
 
@@ -18,8 +20,11 @@ public class GreetingResource {
     // @RestClient
     // WorldClockService worldClockService;
 
-    @Inject
-    ExpensiveService expensiveService;
+    // @Inject
+    // ExpensiveService expensiveService;
+
+    @ConfigProperty(name = "greeting.message")
+    String msg;
 
     // @GET
     // @Produces(MediaType.APPLICATION_JSON)
@@ -38,7 +43,8 @@ public class GreetingResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public int hello() {
-        return expensiveService.calculate();
+    public String hello() {
+        return msg;
+
     }
 }

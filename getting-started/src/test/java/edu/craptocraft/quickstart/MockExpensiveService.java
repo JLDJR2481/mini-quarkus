@@ -1,15 +1,15 @@
-package edu.craptocraft.quickstart;
+// package edu.craptocraft.quickstart;
 
-import io.quarkus.test.Mock;
-import jakarta.enterprise.context.ApplicationScoped;
+// import io.quarkus.test.Mock;
+// import jakarta.enterprise.context.ApplicationScoped;
 
-@ApplicationScoped
-@Mock
-public class MockExpensiveService implements ExpensiveService {
+// @ApplicationScoped
+// @Mock
+// public class MockExpensiveService implements ExpensiveService {
 
-    @Override
-    public int calculate() {
-        return 20;
-    }
+//     @Override
+//     public int calculate() {
+//         return 20;
+//     }
 
-}
+// }

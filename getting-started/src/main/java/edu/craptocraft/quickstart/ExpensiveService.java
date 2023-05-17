@@ -1,7 +1,7 @@
-package edu.craptocraft.quickstart;
+// package edu.craptocraft.quickstart;
 
-public interface ExpensiveService {
+// public interface ExpensiveService {
 
-    int calculate();
+//     int calculate();
 
-}
+// }

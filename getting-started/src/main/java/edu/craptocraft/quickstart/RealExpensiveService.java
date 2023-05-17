@@ -1,19 +1,19 @@
-package edu.craptocraft.quickstart;
+// package edu.craptocraft.quickstart;
 
-import jakarta.enterprise.context.ApplicationScoped;
+// import jakarta.enterprise.context.ApplicationScoped;
 
-@ApplicationScoped
-public class RealExpensiveService implements ExpensiveService {
+// @ApplicationScoped
+// public class RealExpensiveService implements ExpensiveService {
 
-    @Override
-    public int calculate() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
+//     @Override
+//     public int calculate() {
+//         try {
+//             Thread.sleep(5000);
+//         } catch (InterruptedException e) {
 
-            e.printStackTrace();
-        }
-        return 100;
-    }
+//             e.printStackTrace();
+//         }
+//         return 100;
+//     }
 
-}
+// }
