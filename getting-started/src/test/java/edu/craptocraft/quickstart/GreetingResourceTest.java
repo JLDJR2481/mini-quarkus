@@ -15,7 +15,13 @@ public class GreetingResourceTest {
                 .when().get("/hello")
                 .then()
                 .statusCode(200)
-                .body(is("Hello World!"));
+                .body(is("20"));
+        // Con Mock, 20. Normal, 100
+        // given()
+        // .when().get("/hello")
+        // .then()
+        // .statusCode(200)
+        // .body(is("100"));
     }
 
 }
